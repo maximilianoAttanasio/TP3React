@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+.tarjeta {
+  text-align: left;
+  display: flex;
+  padding: 0.5rem;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.tarjetaBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid red;
+}
+
+.tarjetaTitulo {
+  font-size: 1.5rem;
+}
+
+.tarjetaCostos,
+.tarjetaVendidos {
+  font-size: 0.7rem;
+}
+
+.btnCompra:hover {
+  background-color: #218838;
+}
+
+.btnNoStock:hover {
+  background-color: #c82333;
+  cursor: not-allowed;
+}
+
+.btnCompra:hover,
+.btnNoStock:hover {
+  border: 1px solid transparent;
+}
+
+.btnCompra:focus,
+.btnNoStock:focus {
+  outline: none;
+}
