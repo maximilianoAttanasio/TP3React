@@ -6,12 +6,18 @@ import InstrumentoItem from "./InstrumentoItem";
 function Listado() {
   const [instrumentos, setInstrumentos] = useState<Instrumento[]>([]);
 
-  const getInstrumentos = () => {
-    let datos: Instrumento[] = getInstrumentosJSON();
-    setInstrumentos(datos);
-  };
+  // const getInstrumentos = () => {
+  //   let datos: Instrumento[] = getInstrumentosJSON();
+  //   setInstrumentos(datos);
+  // };
 
   useEffect(() => {
+    const getInstrumentos = async () => {
+      const res = await fetch("/instrumentos.json");
+      const data = await res.json();
+      setInstrumentos(data.instrumentos);
+    };
+
     getInstrumentos();
   }, []);
 
