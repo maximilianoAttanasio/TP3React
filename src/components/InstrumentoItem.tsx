@@ -1,19 +1,7 @@
 import { useState } from "react";
+import Instrumento from "../entities/Instrumento";
 
-type InstrumentoParams = {
-  id: number;
-  instrumento: string;
-  marca: string;
-  modelo: string;
-  imagen: string;
-  precio: string;
-  costoEnvio: string;
-  cantidadVendida: number;
-  descripcion: string;
-  stockInicial: boolean;
-};
-
-function InstrumentoItem(args: InstrumentoParams) {
+function InstrumentoItem(args: Instrumento) {
   const [count, increaseCount] = useState(args.cantidadVendida);
   const texto = args.stockInicial ? "Comprar" : "Sin stock";
   const btnClass = args.stockInicial

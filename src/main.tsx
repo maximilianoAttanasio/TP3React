@@ -11,6 +11,7 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/listado" element={<Listado />} />
         <Route path="/app" element={<App />} />
+        <Route path="*" element={<Listado />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
